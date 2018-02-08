@@ -1,6 +1,6 @@
 # Team ILT + xAPI
 
-## The Goal of this project is to bring the xAPI into the Instructor led arena. 
+## The Goal of this project is to bring the xAPI into the Instructor Led Training arena. 
 
 To test the concept of this idea Please follow these steps.
 
