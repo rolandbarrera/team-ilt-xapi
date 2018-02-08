@@ -22,7 +22,7 @@ var statement = new TinCan.Statement(
         "name": fName.value,
         "account": {
                 "name": "123456",
-                "homePage": "https://mylearn.rackspace.com",
+                "homePage": "https://atombox.com",
         },
         "mbox": 'mailto:'+emailAddress.value,
         "objectType": "Agent"
