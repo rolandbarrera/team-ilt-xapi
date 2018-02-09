@@ -7,7 +7,8 @@
 		<title>reveal.js</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-        <link rel="stylesheet" href="css/theme/black.css">
+       <!-- <link rel="stylesheet" href="css/theme/black.css">-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
         <!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
        <script src="https://rawgit.com/RusticiSoftware/TinCanJS/master/build/tincan-min.js" type="text/javascript"></script>
@@ -22,7 +23,7 @@
         <script src="assets/functions.js"></script>
         
 	</head>
-	<body>
+	<body >
 				<div class="reveal">
 			<div class="slides">
 				<section >
@@ -41,7 +42,8 @@
   var emailAddress = document.getElementById("email_address");
   emailAddress.value = "Something@somedomain.com";
 </script>
-
+<br><br>
+<button href="#" class="navigate-right button is-large button is-danger "> Start Presentation </button>
 </div>
 </div>
                     
@@ -53,28 +55,41 @@
 					<h3 class="is-size-1">Send via Click</h3>
                     <button class="button is-large is-danger" onclick="sendStatement('http://activitystrea.ms/schema/1.0/interact', 'interacted')">Click me to send "Interacted Statement"</button>
                     <br>
-                    <h1>(BTW a Statement was sent when you opened this slide.)</h1>
+                    <h4>(BTW a Statement was sent when you opened this slide.)</h4>
                 
                 
 				</section>
 
 				<section data-transition="none" data-state="p2">
-					<h3>Page 2</h3>
+					<h1 class="is-size-1">Let's Track user specific data. <br> Choose a Color.</h1>
+<br><br><br>
+<div class="columns">
+  <div class="column">
+<button onclick="sendStatementColor('yellow');" style="width:75%" class="navigate-right button button is-large buto is-warning"></button>  
+  </div>
+  <div class="column">
+<button onclick="sendStatementColor('red');" style="width:75%" class="navigate-right button button is-large buto is-danger"></button>
+  </div>
+  <div class="column">
+<button onclick="sendStatementColor('green');" style="width:75%" class="navigate-right button button is-large buto is-success"></button>
+  </div>
+  <div class="column">
+<button onclick="sendStatementColor('blue');" style="width:75%" class="navigate-right button button is-large buto is-link"></button>
+  </div>
+</div>
+
 				</section>
 
-				<section data-transition="none" data-state="p3">
-					<h3>Page 3</h3>
+				<section data-transition="none" data-state="p3" >
+					<h3 class="is-size-1">Let's See what color everyone selected!</h3>
+                    <br> <br>
+                    <div id='response' class="is-small" ></div>
+                    <script>
+                    </script>
+                    
 				</section>
 
-				<section data-transition="none" data-state="p4">
-					<h3>Page 4</h3>
-				</section>
-
-				<section data-transition="none" data-state="p5">
-					<h3>Page 5</h3>
-				</section>
-
-			</div>
+					</div>
 
 		</div>
 
@@ -98,21 +113,16 @@
             Reveal.configure({ slideNumber: true });
             Reveal.configure({ slideNumber: 'c/t' });
             
-Reveal.addEventListener( 'p1', function() {
-	sendStatement('http://id.tincanapi.com/verb/viewed', 'viewed')
-}, false );
-Reveal.addEventListener( 'p2', function() {
-	sendStatement('http://id.tincanapi.com/verb/viewed', 'viewed')
-}, false );   
-Reveal.addEventListener( 'p3', function() {
-	sendStatement('http://id.tincanapi.com/verb/viewed', 'viewed')
-}, false );
-Reveal.addEventListener( 'p4', function() {
-	sendStatement('http://id.tincanapi.com/verb/viewed', 'viewed')
-}, false );
-Reveal.addEventListener( 'p5', function() {
-	sendStatement('http://id.tincanapi.com/verb/viewed', 'viewed')
-}, false );             
+            Reveal.addEventListener( 'p1', function() {
+	           sendStatement('http://id.tincanapi.com/verb/viewed', 'viewed')
+                    }, false );
+            Reveal.addEventListener( 'p2', function() {
+	           sendStatement('http://id.tincanapi.com/verb/viewed', 'viewed')
+                    }, false );   
+            Reveal.addEventListener( 'p3', function() {
+	           sendStatement('http://id.tincanapi.com/verb/viewed', 'viewed'),
+               getStatementColor()
+                    }, false );
 		</script>
 	</body>
 </html>
