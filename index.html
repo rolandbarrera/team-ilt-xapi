@@ -121,7 +121,7 @@
                     }, false );   
             Reveal.addEventListener( 'p3', function() {
 	           sendStatement('http://id.tincanapi.com/verb/viewed', 'viewed'),
-               getStatementColor()
+               setTimeout(getStatementColor(),1000);
                     }, false );
 		</script>
 	</body>
