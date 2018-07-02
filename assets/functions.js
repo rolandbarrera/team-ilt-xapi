@@ -1,8 +1,8 @@
 
 var lrsCreds = {
         endpoint: " http://atombox.com/data/xAPI",
-        username: "1a039df04becfebff1ec7d30ad15e71b4c31e929",
-        password: "af502710ec969e6be77ea45ea9dd9241c2dfa4a9",
+        username: "",
+        password: "",
         allowFail: false
         }
 function sendStatement(xAPIverbIRI, xAPIverb) {
